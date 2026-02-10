@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Industry Universe | DataMites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #007bff; --text: #1d1d1f; --bg: #f8f9fb; }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            background-color: var(--bg); 
+            color: var(--text); 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background Pattern to fill blank space */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(var(--blue) 0.5px, transparent 0.5px);
+            background-size: 30px 30px;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        header { 
+            text-align: center; 
+            padding: 50px 20px 30px;
+        }
+
+        h1 { font-size: 32px; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; }
+        p { color: #86868b; font-size: 15px; }
+
+        /* FLEX WRAP: Fixed the overlap issue */
+        .bubble-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Space between bubbles */
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .industry-bubble {
+            width: 130px;
+            height: 130px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 700;
+            font-size: 13px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Floating effect for each bubble with different timing */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .industry-bubble:nth-child(even) { animation-delay: 1s; }
+        .industry-bubble:nth-child(3n) { animation-delay: 2s; }
+
+        .industry-bubble:active { transform: scale(0.9); }
+        .industry-bubble:hover { border-color: var(--blue); box-shadow: 0 15px 30px rgba(0,123,255,0.15); }
+
+        .bubble-icon { font-size: 28px; margin-bottom: 8px; }
+
+        /* Highlighted Bubble */
+        .main-bubble {
+            background: var(--blue);
+            color: #fff;
+            width: 145px;
+            height: 145px;
+            box-shadow: 0 15px 35px rgba(0,123,255,0.3);
+        }
+
+        .footer-nav {
+            padding: 30px 20px;
+            background: #fff;
+            border-top: 1px solid #eee;
+            width: 100%;
+        }
+
+        .btn-stack { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 12px; 
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            padding: 18px; border-radius: 16px; text-decoration: none;
+            text-align: center; font-weight: 700; font-size: 15px;
+        }
+        .btn-black { background: var(--text); color: #fff; }
+        .btn-outline { border: 2px solid #eee; color: var(--text); }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Project Universe</h1>
+        <p>Explore industries where Data Science thrives</p>
+    </header>
+
+    <div class="bubble-container">
+        <a href="projects-healthcare.html" class="industry-bubble">
+            <span class="bubble-icon">🏥</span>
+            Health
+        </a>
+
+        <a href="projects-ecommerce.html" class="industry-bubble main-bubble">
+            <span class="bubble-icon">🛒</span>
+            E-Commerce
+        </a>
+
+        <a href="projects-finance.html" class="industry-bubble">
+            <span class="bubble-icon">💰</span>
+            Finance
+        </a>
+
+        <a href="projects-supplychain.html" class="industry-bubble">
+            <span class="bubble-icon">📦</span>
+            Supply
+        </a>
+
+        <a href="projects-automotive.html" class="industry-bubble">
+            <span class="bubble-icon">🚗</span>
+            Auto
+        </a>
+    </div>
+
+    <div class="footer-nav">
+        <div class="btn-stack">
+            <a href="all-projects.html" class="btn btn-black">See Industry Projects</a>
+            <a href="placement-team.html" class="btn btn-outline">Placement Team</a>
+        </div>
+    </div>
+
+</body>
+</html>

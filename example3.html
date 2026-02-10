@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Healthcare Mission | DataMites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --green: #10b981; --red: #ef4444; --dark: #1a1a1a; --gray: #666; --blue: #3b82f6; }
+        
+        * { box-sizing: border-box; }
+
+        body { 
+            background: #fff; 
+            color: var(--dark); 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            margin: 0; 
+            overflow-x: hidden; 
+            scroll-behavior: smooth; 
+        }
+
+        /* FIXED HEADER: No more overlap */
+        .top-header { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            text-align: center; 
+            z-index: 1000; 
+            padding: 15px 0; 
+            background: rgba(255, 255, 255, 0.95); 
+            border-bottom: 1px solid #eee;
+            backdrop-filter: blur(5px);
+        }
+        .header-tag { 
+            background: rgba(16, 185, 129, 0.1); 
+            color: var(--green); 
+            padding: 6px 20px; 
+            border-radius: 30px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            border: 1px solid rgba(16, 185, 129, 0.2); 
+        }
+
+        .progress-nav { position: fixed; top: 0; width: 100%; height: 5px; background: #eee; z-index: 1001; }
+        .progress-fill { height: 100%; background: var(--green); width: 0%; transition: 0.3s; }
+
+        /* GAP FIX: Changed min-height to auto and adjusted padding */
+        .slide { 
+            min-height: auto; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 90px 20px 50px; /* Top padding clears the header */
+            text-align: center; 
+            border-bottom: 1px solid #f9f9f9; 
+            max-width: 450px; 
+            margin: 0 auto;
+        }
+
+        .module-label { font-weight: 800; color: var(--green); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        .hero-title { font-size: 28px; font-weight: 800; margin: 12px 0; line-height: 1.2; color: #000; }
+        .story-box { font-size: 16px; color: var(--gray); line-height: 1.7; margin-bottom: 25px; }
+        .highlight { color: var(--dark); font-weight: 600; border-bottom: 2px solid var(--green); }
+
+        .tools-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 5px; }
+        .tool-card { background: #f0fdf4; border: 1px solid #dcfce7; padding: 6px 14px; border-radius: 50px; font-size: 11px; font-weight: 600; color: var(--green); }
+
+        .action-group { display: flex; gap: 15px; margin-top: 40px; flex-direction: column; width: 100%; align-items: center; }
+        .primary-btn { background: var(--dark); color: #fff; padding: 18px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 16px; width: 100%; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        
+        .motivation-box { background: #f0f9ff; padding: 25px; border-radius: 20px; margin-top: 35px; border: 1px solid #bae6fd; text-align: center; font-size: 14px; }
+
+        /* BACK BUTTON SIMPLE TEXT */
+        .back-link { 
+            text-decoration: none; color: #888; font-size: 13px; font-weight: 600; 
+            display: inline-block; margin-top: 20px; padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="progress-nav"><div class="progress-fill" id="pBar"></div></div>
+<div class="top-header"><div class="header-tag">Example 3 - Healthcare Mission</div></div>
+
+<section class="slide">
+    <span class="module-label">Module 01 & 02: Foundation</span>
+    <h1 class="hero-title">Saving Lives with Data.</h1>
+    <div class="story-box">
+        A hospital has thousands of patient records with heart issues. You use <span class="highlight">Python</span> to organize this messy data, making it ready for the doctors to analyze.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Python Foundation</span> <span class="tool-card">Data Science Foundation</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="module-label">Module 03: Statistics</span>
+    <h1 class="hero-title">Predicting Disease Risk.</h1>
+    <div class="story-box">
+        Is a patient at risk of a heart attack? You use <span class="highlight">Statistics</span> to calculate the "Probability" based on their history to start treatment early.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Statistics Essentials</span> <span class="tool-card">Probability</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="module-label">Module 04 & 05: Machine Learning</span>
+    <h1 class="hero-title">The Virtual Doctor.</h1>
+    <div class="story-box">
+        You build a <span class="highlight">Machine Learning</span> model that looks at X-rays to detect diseases instantly, helping doctors make zero-error decisions.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">ML Associate</span> <span class="tool-card">ML Expert</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="module-label">Module 06, 08 & 09: Scaling Up</span>
+    <h1 class="hero-title">Global Health Network.</h1>
+    <div class="story-box">
+        Track viruses in real-time globally using <span class="highlight">Cloud (AWS)</span> and <span class="highlight">Big Data</span> while using <span class="highlight">Git</span> to share findings.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Big Data Foundation</span> <span class="tool-card">Cloud Deployment</span> <span class="tool-card">Git</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="module-label">Module 07 & 10: Database & BI</span>
+    <h1 class="hero-title">The Surgeon's Dashboard.</h1>
+    <div class="story-box">
+        Filter critical data via <span class="highlight">SQL</span> and show it on a <span class="highlight">Tableau Dashboard</span> to see how many lives were saved today.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">SQL Databases</span> <span class="tool-card">Tableau / Power BI</span>
+    </div>
+
+    <div class="motivation-box">
+        <b>At DataMites, you start from Zero!</b><br>
+        Learn everything from Python to Advanced AI to build impactful projects from scratch with Datamites.
+    </div>
+
+    <div class="action-group">
+        <a href="internship-entry.html" class="primary-btn">Part 2: Internship →</a>
+        <a href="parts.html" class="back-link">← Back to Phase</a>
+    </div>
+</section>
+
+<script>
+    window.onscroll = function() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("pBar").style.width = scrolled + "%";
+    };
+</script>
+
+</body>
+</html>

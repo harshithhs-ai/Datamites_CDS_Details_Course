@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Partners | DataMites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root { --neon-green: #00ffaa; --blue: #007bff; --dark: #08080a; }
+        
+        * { box-sizing: border-box; }
+        body, html { 
+            margin: 0; padding: 0; width: 100%; height: 100%;
+            background-color: var(--dark); color: #fff; 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            overflow: hidden;
+        }
+
+        .grid-bg {
+            position: absolute; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 0;
+        }
+
+        /* Container for rising logos - Set to Z-20 to be ON TOP */
+        .logo-stream-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 20; 
+            overflow: hidden;
+            pointer-events: none; 
+        }
+
+        .logo-card {
+            position: absolute; 
+            width: 85px; 
+            height: 50px;
+            background: #fff; 
+            border-radius: 12px;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            padding: 8px;
+            box-shadow: 0 10px 25px rgba(0, 255, 170, 0.4);
+            opacity: 0;
+            bottom: -70px; 
+            will-change: transform;
+        }
+        .logo-card img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+        /* UI Panel - Z-index adjusted so logos pass over/under appropriately */
+        .ui-panel {
+            position: absolute; bottom: 0; width: 100%;
+            background: linear-gradient(to top, var(--dark) 70%, transparent);
+            padding: 40px 25px 30px; 
+            z-index: 25; /* Text stays slightly above for readability */
+        }
+
+        .status-badge {
+            display: inline-block; padding: 6px 14px;
+            background: rgba(0, 255, 170, 0.2);
+            color: var(--neon-green); border: 2px solid var(--neon-green);
+            border-radius: 6px; font-size: 11px; font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        h1 { font-size: 32px; font-weight: 800; margin: 0; letter-spacing: -1px; }
+        .stats-row { margin: 15px 0; display: flex; align-items: baseline; gap: 10px; }
+        .big-num { font-size: 48px; font-weight: 800; color: #fff; }
+        .stats-label { color: var(--neon-green); font-size: 12px; font-family: 'JetBrains Mono'; font-weight: 700; }
+
+        .btn-claim {
+            display: block; width: 100%; background: var(--blue);
+            color: #fff; padding: 22px; border-radius: 16px;
+            text-decoration: none; font-weight: 800; text-align: center;
+            font-size: 18px; box-shadow: 0 10px 30px rgba(0, 123, 255, 0.4);
+            pointer-events: auto; /* Ensures button is clickable */
+        }
+
+        /* Fast Animation for Rising */
+        @keyframes riseUp {
+            0% { transform: translateY(0); opacity: 0; }
+            5% { opacity: 1; }
+            95% { opacity: 1; }
+            100% { transform: translateY(-120vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body onload="startRising()">
+
+    <div class="grid-bg"></div>
+
+    <div class="logo-stream-container" id="stream">
+        <div class="logo-card"><img src="image1.png"></div>
+        <div class="logo-card"><img src="image2.png"></div>
+        <div class="logo-card"><img src="image3.png"></div>
+        <div class="logo-card"><img src="image4.png"></div>
+        <div class="logo-card"><img src="image5.png"></div>
+        <div class="logo-card"><img src="image6.png"></div>
+        <div class="logo-card"><img src="image7.png"></div>
+        <div class="logo-card"><img src="image8.png"></div>
+        <div class="logo-card"><img src="image9.png"></div>
+        <div class="logo-card"><img src="image10.png"></div>
+    </div>
+
+    <div class="ui-panel">
+        <div class="status-badge">NETWORK ACTIVE</div>
+        <h1>Unlock Your Future.</h1>
+        
+        <div class="stats-row">
+            <div class="big-num">2500+</div>
+            <div class="stats-label">PARTNERS WAITING</div>
+        </div>
+
+        <p style="color: #ccc; font-size: 14px; line-height: 1.6; margin-bottom: 30px;">
+            Your profile is being optimized for our network of 2,500+ hiring partners.
+        </p>
+
+        <a href="placement-info.html" class="btn-claim">View Placement Process</a>
+    </div>
+
+    <script>
+        function startRising() {
+            const cards = document.querySelectorAll('.logo-card');
+            
+            cards.forEach((card, i) => {
+                // Wider spread for better visibility
+                const randomLeft = Math.floor(Math.random() * 80) + 5; 
+                card.style.left = `${randomLeft}%`;
+
+                // FAST SPEED: 4s to 6s duration
+                const duration = 4 + Math.random() * 2; 
+                const delay = i * 0.8; // Shorter delay between logos
+
+                card.style.animation = `riseUp ${duration}s linear ${delay}s infinite`;
+            });
+        }
+    </script>
+</body>
+</html>

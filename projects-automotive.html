@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Projects | DataMites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --auto-red: #ef4444; --auto-dark: #111827; --soft-bg: #f9f9f9; }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            background: var(--soft-bg); color: var(--auto-dark); 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            line-height: 1.6;
+        }
+
+        /* High-Speed Carbon Style Header */
+        .header-banner {
+            background: linear-gradient(135deg, #000000 0%, #111827 100%);
+            padding: 60px 20px;
+            text-align: center;
+            color: #fff;
+            border-bottom: 4px solid var(--auto-red);
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        .header-banner h1 { font-size: 28px; font-weight: 800; margin-bottom: 5px; letter-spacing: 1px; }
+        .header-banner p { opacity: 0.9; font-size: 14px; color: var(--auto-red); font-weight: 800; text-transform: uppercase; }
+
+        .content-area { padding: 20px; max-width: 600px; margin: 0 auto; }
+
+        .back-nav { margin-top: -30px; margin-bottom: 20px; text-align: center; }
+        .back-link { 
+            text-decoration: none; color: #fff; background: var(--auto-red);
+            padding: 8px 20px; border-radius: 50px; font-weight: 700; 
+            font-size: 13px; box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+        }
+
+        /* Project Cards */
+        .project-card {
+            background: #fff; padding: 22px; border-radius: 20px;
+            margin-bottom: 15px; border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .project-no {
+            font-size: 11px; font-weight: 800; color: var(--auto-red);
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        .project-name { font-size: 18px; font-weight: 800; color: #111827; margin: 4px 0; }
+        .project-desc { font-size: 14px; color: #4b5563; }
+
+        /* Footer */
+        .footer-btns {
+            margin-top: 30px; display: flex; flex-direction: column;
+            gap: 12px; padding-bottom: 40px;
+        }
+
+        .btn {
+            padding: 18px; border-radius: 16px; text-decoration: none;
+            text-align: center; font-weight: 700; font-size: 15px;
+        }
+        .btn-black { background: var(--auto-dark); color: #fff; }
+        .btn-outline { border: 2px solid #e5e7eb; color: var(--auto-dark); background: #fff; }
+    </style>
+</head>
+<body>
+
+    <div class="header-banner">
+        <h1>Automotive & Smart Mobility</h1>
+        <p>10+ Next-Gen Vehicle Projects</p>
+    </div>
+
+    <div class="content-area">
+        <div class="back-nav">
+            <a href="Projects-gallery.html" class="back-link">← Back to Universe</a>
+        </div>
+
+        <div class="project-list">
+            <div class="project-card">
+                <span class="project-no">Project 01</span>
+                <div class="project-name">Predictive Maintenance AI</div>
+                <p class="project-desc">Analyze sensor data (vibration, heat) to predict engine failure before it happens.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 02</span>
+                <div class="project-name">Object Detection for ADAS</div>
+                <p class="project-desc">Build a Computer Vision model to identify pedestrians and vehicles in real-time camera feeds.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 03</span>
+                <div class="project-name">EV Battery Range Prediction</div>
+                <p class="project-desc">Use Regression to accurately estimate Electric Vehicle battery life based on driving style.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 04</span>
+                <div class="project-name">Driver Drowsiness Detection</div>
+                <p class="project-desc">Monitor facial landmarks to alert the driver if they show signs of sleepiness or distraction.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 05</span>
+                <div class="project-name">Smart Parking System</div>
+                <p class="project-desc">Analyze sensor data from parking lots to guide drivers to the nearest empty spot via an app.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 06</span>
+                <div class="project-name">Connected Car Data War-Room</div>
+                <p class="project-desc">Use SQL and Big Data to process telemetry from millions of vehicles for fleet management.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 07</span>
+                <div class="project-name">Traffic Flow Optimization</div>
+                <p class="project-desc">Predict traffic jams and suggest alternative routes using historical city-wide data.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 08</span>
+                <div class="project-name">Warranty Claim Analytics</div>
+                <p class="project-desc">Detect fraudulent or unusual warranty claims using Anomaly Detection to save costs.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 09</span>
+                <div class="project-name">Tire Pressure Monitoring AI</div>
+                <p class="project-desc">Predict tire wear and tear patterns based on pressure history and road conditions.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 10</span>
+                <div class="project-name">Autonomous Path Planning</div>
+                <p class="project-desc">Simple simulation project to navigate a virtual vehicle through obstacles using Reinforcement Learning.</p>
+            </div>
+        </div>
+
+        <div class="footer-btns">
+            <a href="placement-team.html" class="btn btn-black">How Datamites supports Placements →</a>
+            <a href="Projects-gallery.html" class="btn btn-outline">Explore Other Industries</a>
+        </div>
+    </div>
+
+</body>
+</html>

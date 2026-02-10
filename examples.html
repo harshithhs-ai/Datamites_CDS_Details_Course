@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Netflix Mission | Fact Mode</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --red: #e50914; --dark: #111; --text: #333; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            background: #fff; color: var(--text); 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            overflow-x: hidden; line-height: 1.6;
+        }
+
+        /* Top Header */
+        .top-header { 
+            position: fixed; top: 0; left: 0; width: 100%; 
+            text-align: center; z-index: 1000; padding: 15px 0;
+            background: #fff; border-bottom: 1px solid #eee;
+        }
+        .header-tag { font-size: 11px; font-weight: 800; color: var(--red); text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Progress Bar */
+        .progress-nav { position: fixed; top: 0; width: 100%; height: 4px; background: #eee; z-index: 1001; }
+        .progress-fill { height: 100%; background: var(--red); width: 0%; }
+
+        /* Layout - Standard Mobile Width */
+        .content-container { 
+            width: 100%; max-width: 420px; margin: 0 auto;
+            padding: 100px 25px 50px; 
+        }
+
+        /* Fact Styling (No Bullets) */
+        .fact-section { margin-bottom: 60px; position: relative; }
+        .step-label { 
+            font-size: 10px; font-weight: 800; color: #aaa; 
+            text-transform: uppercase; margin-bottom: 10px; display: block;
+        }
+        .fact-title { font-size: 24px; font-weight: 800; color: #000; margin-bottom: 15px; line-height: 1.2; }
+        .fact-description { font-size: 16px; color: #555; margin-bottom: 20px; }
+        
+        .tool-highlight {
+            display: inline-block; background: #f4f4f4; padding: 4px 12px;
+            border-radius: 6px; font-weight: 700; font-size: 12px; color: var(--red);
+            border: 1px solid #eee;
+        }
+
+        /* Animated Scroll Indicator */
+        .scroll-box {
+            display: flex; flex-direction: column; align-items: center; margin-bottom: 40px;
+        }
+        .scroll-line {
+            width: 1px; height: 60px; background: #ddd; position: relative; overflow: hidden;
+        }
+        .scroll-line::after {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 30px;
+            background: #999; animation: slideDown 2s infinite;
+        }
+        @keyframes slideDown { 0% { top: -30px; } 100% { top: 60px; } }
+
+        /* Conclusion Card */
+        .final-fact {
+            background: var(--dark); color: #fff; padding: 30px; border-radius: 20px;
+            text-align: center; margin-top: 40px;
+        }
+        .btn-action {
+            display: block; background: var(--red); color: #fff; padding: 18px;
+            border-radius: 12px; text-decoration: none; font-weight: 800;
+            margin-top: 25px; box-shadow: 0 10px 20px rgba(229, 9, 20, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+<div class="progress-nav"><div class="progress-fill" id="pBar"></div></div>
+<div class="top-header"><div class="header-tag">The Netflix Data Fact-Sheet</div></div>
+
+<div class="content-container">
+
+    <section class="fact-section">
+        <span class="step-label">Modules 01 & 02</span>
+        <h2 class="fact-title">It starts with a mess.</h2>
+        <p class="fact-description">
+            Netflix doesn't just "know" what you like. Millions of rows of raw, messy data are generated every second. First, we use the foundation of Data Science and <b>Python</b> to clean this chaos so it actually makes sense.here you learn how data looks and cleaning data and phython.
+        </p>
+        <div class="tool-highlight">Python Foundation & Data foundation</div>
+
+        <div class="scroll-box" style="margin-top: 40px;">
+            <p style="font-size: 10px; color: #ccc; margin-bottom: 10px;">KEEP SCROLLING</p>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <section class="fact-section">
+        <span class="step-label">Module 03</span>
+        <h2 class="fact-title">Probability rules the "Trending" list.</h2>
+        <p class="fact-description">
+            A show/movie reaches Trending #1  because Analytics dictates it. We model success patterns across diverse markets to ensure the ideal content finds your home screen in your Device.Here you learn about Statistics and its essentials
+        </p>
+        <div class="tool-highlight">Statistics Essentials</div>
+    </section>
+
+    <section class="fact-section">
+        <span class="step-label">Modules 04 & 05</span>
+        <h2 class="fact-title">The app has a brain.</h2>
+        <p class="fact-description">
+            This is where <b>Machine Learning</b> takes over. By looking at your past choices, the algorithm builds a personal profile for you, predicting your next favorite show before you even search for it. Here we teach you about Machine learning concepts.
+        </p>
+        <div class="tool-highlight">ML Associate & Expert</div>
+    </section>
+
+    <section class="fact-section">
+        <span class="step-label">Module 06</span>
+        <h2 class="fact-title">Advanced patterns.</h2>
+        <p class="fact-description">
+            To predict global hits like "Squid Game," we dive into Advanced Data Science. We look for deep patterns in global viewing habits that a human eye would never catch.
+        </p>
+        <div class="tool-highlight">Advanced Data Science</div>
+    </section>
+
+    <section class="fact-section">
+        <span class="step-label">Module 07</span>
+        <h2 class="fact-title">Storing the world's taste.</h2>
+        <p class="fact-description">
+            Netflix stores the preferences of over 200 million people. We use <b>SQL and MongoDB</b> to manage these massive databases so your profile loads instantly, every time.
+        </p>
+        <div class="tool-highlight">SQL & MongoDB</div>
+    </section>
+
+    <section class="fact-section">
+        <span class="step-label">Module 08</span>
+        <h2 class="fact-title">Showing results to the Boss.</h2>
+        <p class="fact-description">
+            Data is useless if the CEO can't read it. We use <b>Tableau</b> &<b>PowerBI</b> to turn complex numbers into simple, powerful visuals that help Netflix CEO decide where to spend next billion dollars.
+        </p>
+        <div class="tool-highlight">Data Visualization</div>
+    </section>
+
+    <section class="fact-section">
+        <span class="step-label">Module 09</span>
+        <h2 class="fact-title">Going global with Big Data.</h2>
+        <p class="fact-description">
+            Handling billions of data points without the app crashing requires <b>Big Data Foundation</b>. This ensures Netflix stays smooth, whether you are in Bengaluru or New York.Tools used here are Hadoop & Spark.
+        </p>
+        <div class="tool-highlight">Big Data</div>
+    </section>
+
+    <section class="fact-section">
+        <span class="step-label">Module 10</span>
+        <h2 class="fact-title">The Certification Fact.</h2>
+        <p class="fact-description">
+            The final step isn't just a test; it's proving you are an <b>IABAC Certified Data Scientist</b>. This global shield is what gets you through the doors of the top MNCs.
+        </p>
+        <div class="tool-highlight">IABAC Exam</div>
+    </section>
+
+    <div class="final-fact">
+        <h3>The Reality</h3>
+        <p style="font-size: 14px; opacity: 0.8; margin-top: 10px;">
+            You aren't just learning modules; you are learning to build Big Big Machines with ease 8 hours theory and 12hours practicals conducts in a week,hope this example helps you to understand about Modules Syllabus.
+        </p>
+        <a href="example2.html" class="btn-action">Move to Another Example</a>
+    </div>
+
+<div class="final-container" style="
+    width: 100%; 
+    max-width: 420px; 
+    margin: 40px auto; 
+    padding: 0 20px; 
+    text-align: center;
+">
+    <div class="info-card" style="
+        background: #111; 
+        color: #fff; 
+        padding: 30px 25px; 
+        border-radius: 24px; 
+        margin-bottom: 20px;
+    ">
+              
+        <a href="parts.html" style="
+            color: #888; 
+            text-decoration: none; 
+            font-size: 13px; 
+            font-weight: 600;
+        ">← Back to Phase</a>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+    window.onscroll = function() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("pBar").style.width = scrolled + "%";
+    };
+</script>
+
+</body>
+</html>

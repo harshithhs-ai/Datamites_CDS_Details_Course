@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Process | DataMites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #007bff; --dark: #121212; --light-grey: #f8f9fa; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            margin: 0; padding: 0; background: #ffffff; color: var(--dark);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Branding Header */
+        .nav-header { padding: 25px; text-align: center; background: #fff; }
+        .nav-header img { height: 45px; }
+
+        .container { padding: 0 25px 50px; max-width: 500px; margin: 0 auto; }
+
+        h1 { font-size: 28px; font-weight: 800; margin: 10px 0 30px; line-height: 1.2; text-align: center; }
+
+        /* Timeline Process */
+        .process-flow { position: relative; margin-top: 20px; }
+
+        .step-item {
+            position: relative; padding-left: 45px; margin-bottom: 35px;
+        }
+        .step-item::before {
+            content: ''; position: absolute; left: 15px; top: 30px;
+            width: 2px; height: calc(100% + 5px); background: #e0e0e0;
+        }
+        .step-item:last-child::before { display: none; }
+
+        .step-icon {
+            position: absolute; left: 0; top: 0;
+            width: 32px; height: 32px; background: var(--blue);
+            color: #fff; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; font-weight: 800;
+            z-index: 2; box-shadow: 0 4px 10px rgba(0,123,255,0.3);
+        }
+
+        .step-content b { font-size: 18px; display: block; margin-bottom: 6px; color: var(--blue); }
+        .step-content p { margin: 0; font-size: 15px; color: #555; line-height: 1.5; }
+
+        /* The "Until You Get Placed" Guarantee Box */
+        .guarantee-card {
+            background: var(--dark); color: #fff; padding: 30px 25px;
+            border-radius: 24px; margin-top: 40px; position: relative;
+            overflow: hidden;
+        }
+        .guarantee-card h2 { font-size: 18px; font-weight: 600; margin: 0 0 15px; opacity: 0.8; }
+        .guarantee-card .big-answer { 
+            font-size: 26px; font-weight: 800; display: block; 
+            color: #00ffaa; letter-spacing: -0.5px;
+        }
+        .guarantee-card p { font-size: 14px; opacity: 0.7; margin-top: 15px; line-height: 1.6; }
+
+        /* Floating Button Container */
+        .action-footer {
+            position: sticky; bottom: 0; background: rgba(255,255,255,0.9);
+            padding: 20px 25px; backdrop-filter: blur(10px);
+            border-top: 1px solid #eee; margin-top: 20px;
+        }
+
+        .btn-start {
+            display: block; width: 100%; background: var(--blue);
+            color: #fff; padding: 20px; border-radius: 16px;
+            text-decoration: none; font-weight: 800; text-align: center;
+            font-size: 18px; box-shadow: 0 8px 25px rgba(0,123,255,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-header">
+        <img src="datamites-logo.png" alt="DataMites">
+    </div>
+
+    <div class="container">
+        <h1>Placement Journey</h1>
+
+        <div class="process-flow">
+            <div class="step-item">
+                <div class="step-icon">1</div>
+                <div class="step-content">
+                    <b>Mock Interviews</b>
+                    <p>Post-training, our experts conduct rigorous mock sessions to sharpen your technical and communication skills.</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-icon">2</div>
+                <div class="step-content">
+                    <b>Direct Scheduling</b>
+                    <p>Our dedicated Placement Team schedules interviews on your behalf with our 2,500+ hiring partners.</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-icon">3</div>
+                <div class="step-content">
+                    <b>One-on-One Updates</b>
+                    <p>Get instant updates on company addresses, interview timings, and job descriptions directly via your registered email.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="guarantee-card">
+            <h2>How many times will you support me with interviews?</h2>
+            <span class="big-answer">UNTIL YOU GET PLACED</span>
+            <p>We believe in your career. We will continue scheduling interviews and sending you for opportunities until you successfully secure your dream job. No limits, no hidden conditions.</p>
+        </div>
+    </div>
+
+    <div class="action-footer">
+        <a href="certifications.html" class="btn-start">Let's See Certificates</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Anniversary Offer | DataMites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <style>
+        :root { --gold: #D4AF37; --dark-bg: #0a0a0a; --accent-red: #ff3e3e; --glass: rgba(255, 255, 255, 0.03); }
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            margin: 0; padding: 0; background: var(--dark-bg); color: #fff;
+            text-align: center; overflow-x: hidden;
+        }
+
+        .container { padding: 60px 20px; max-width: 500px; margin: 0 auto; position: relative; z-index: 10; }
+
+        .anniversary-glow {
+            font-size: 13px; font-weight: 800; color: var(--gold);
+            letter-spacing: 3px; text-transform: uppercase;
+            margin-bottom: 15px; display: inline-block;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 6px 15px; border-radius: 50px;
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        h1 { font-size: 34px; font-weight: 800; margin: 15px 0; line-height: 1.1; letter-spacing: -1px; }
+
+        /* Timer Box */
+        .timer-container {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px; padding: 25px; margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .timer-label { font-size: 12px; color: var(--accent-red); font-weight: 800; margin-bottom: 12px; display: block; letter-spacing: 1px; }
+        #countdown {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 42px; font-weight: 500; color: #fff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Price Section */
+        .price-showcase {
+            background: linear-gradient(145deg, #111, #000);
+            border-radius: 35px; padding: 50px 25px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            margin: 40px 0; position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+        }
+        
+        .old-price-label { font-size: 16px; opacity: 0.4; text-decoration: line-through; }
+        .new-price {
+            font-size: 64px; font-weight: 800; color: var(--gold);
+            display: block; margin: 10px 0;
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4));
+        }
+
+        .gst-tag {
+            border: 1px solid #333; color: #888; padding: 5px 15px;
+            border-radius: 8px; font-size: 11px; font-weight: 700;
+        }
+
+        /* Centered Premium Button */
+        .btn-claim {
+            display: block;
+            margin: 0 auto;
+            width: 100%; 
+            max-width: 380px;
+            background: #fff;
+            color: #000; 
+            padding: 24px; 
+            border-radius: 20px;
+            text-decoration: none; 
+            font-weight: 800; 
+            font-size: 18px;
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.15);
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .btn-claim:active { transform: scale(0.95); }
+
+        .benefits { font-size: 14px; color: #aaa; margin: 30px auto; text-align: left; max-width: 320px; }
+        .benefit-item { display: flex; align-items: center; margin-bottom: 10px; }
+        .benefit-item::before { content: "✓"; color: var(--gold); margin-right: 12px; font-weight: 900; }
+
+        /* Background Sparkles Effect */
+        #sparkles-canvas {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="sparkles-canvas"></canvas>
+
+    <div class="container">
+        <span class="anniversary-glow">✨ 11TH ANNIVERSARY SPECIAL</span>
+        <h1>Unlock Your Career<br>at 2015 Prices</h1>
+
+        <div class="timer-container">
+            <span class="timer-label">⏱️ OFFER EXPIRES SOON</span>
+            <div id="countdown">48:00:00</div>
+        </div>
+
+        <div class="price-showcase">
+            <div class="old-price-label">Regular Price: ₹ 64,451</div>
+            <span class="new-price">₹ 44,900</span>
+            <span class="gst-tag">INCLUSIVE OF 18% GST</span>
+        </div>
+
+        <div class="benefits">
+            <div class="benefit-item">Full Data Science Internship</div>
+            <div class="benefit-item">4 Global Industry Certifications</div>
+            <div class="benefit-item">Unlimited Interview Support</div>
+        </div>
+
+        <a href="final-apply.html" class="btn-claim" onclick="celebrate()">SECURE THIS OFFER →</a>
+
+        <p style="margin-top: 30px; font-size: 12px; opacity: 0.4;">
+            *Limited to the first 50 registrations only.
+        </p>
+    </div>
+
+    <script>
+        // 1. Confetti Celebration Function
+        function celebrate() {
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#D4AF37', '#ffffff', '#ff3e3e']
+            });
+        }
+
+        // Run celebration on load
+        window.onload = function() {
+            celebrate();
+            startPersistentTimer();
+        };
+
+        // 2. Persistent Timer Logic
+        function startPersistentTimer() {
+            const DURATION = 48 * 60 * 60; 
+            const storageKey = 'dm_anniversary_timer_start';
+            let startTime = localStorage.getItem(storageKey);
+
+            if (!startTime) {
+                startTime = Math.floor(Date.now() / 1000);
+                localStorage.setItem(storageKey, startTime);
+            }
+
+            const display = document.querySelector('#countdown');
+
+            const tick = setInterval(() => {
+                const now = Math.floor(Date.now() / 1000);
+                const elapsed = now - startTime;
+                const remaining = DURATION - elapsed;
+
+                if (remaining <= 0) {
+                    clearInterval(tick);
+                    display.textContent = "00:00:00";
+                    display.style.color = "#ff3e3e";
+                    return;
+                }
+
+                const hrs = Math.floor(remaining / 3600);
+                const mins = Math.floor((remaining % 3600) / 60);
+                const secs = remaining % 60;
+
+                display.textContent = 
+                    (hrs < 10 ? "0" + hrs : hrs) + ":" + 
+                    (mins < 10 ? "0" + mins : mins) + ":" + 
+                    (secs < 10 ? "0" + secs : secs);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

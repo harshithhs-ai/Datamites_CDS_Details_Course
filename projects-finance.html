@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Projects | DataMites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --finance-gold: #b2945e; --finance-dark: #1e293b; --soft-bg: #fdfdfd; }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            background: var(--soft-bg); color: var(--finance-dark); 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            line-height: 1.6;
+        }
+
+        /* Finance Style Professional Gradient Header */
+        .header-banner {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 60px 20px;
+            text-align: center;
+            color: #f1f5f9;
+            border-bottom: 4px solid var(--finance-gold);
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        .header-banner h1 { font-size: 28px; font-weight: 800; margin-bottom: 5px; color: #fff; }
+        .header-banner p { opacity: 0.8; font-size: 14px; color: var(--finance-gold); font-weight: 600; }
+
+        .content-area { padding: 20px; max-width: 600px; margin: 0 auto; }
+
+        .back-nav { margin-top: -30px; margin-bottom: 20px; text-align: center; }
+        .back-link { 
+            text-decoration: none; color: #fff; background: var(--finance-gold);
+            padding: 8px 20px; border-radius: 50px; font-weight: 700; 
+            font-size: 13px; box-shadow: 0 4px 12px rgba(178, 148, 94, 0.3);
+        }
+
+        /* Project Cards */
+        .project-card {
+            background: #fff; padding: 22px; border-radius: 20px;
+            margin-bottom: 15px; border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .project-no {
+            font-size: 11px; font-weight: 800; color: var(--finance-gold);
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        .project-name { font-size: 18px; font-weight: 800; color: #0f172a; margin: 4px 0; }
+        .project-desc { font-size: 14px; color: #64748b; }
+
+        /* Footer */
+        .footer-btns {
+            margin-top: 30px; display: flex; flex-direction: column;
+            gap: 12px; padding-bottom: 40px;
+        }
+
+        .btn {
+            padding: 18px; border-radius: 16px; text-decoration: none;
+            text-align: center; font-weight: 700; font-size: 15px;
+        }
+        .btn-black { background: var(--finance-dark); color: #fff; }
+        .btn-outline { border: 2px solid #e2e8f0; color: var(--finance-dark); background: #fff; }
+    </style>
+</head>
+<body>
+
+    <div class="header-banner">
+        <h1>Banking & Finance</h1>
+        <p>10+ High-Impact Financial Projects</p>
+    </div>
+
+    <div class="content-area">
+        <div class="back-nav">
+            <a href="Projects-gallery.html" class="back-link">← Back to Universe</a>
+        </div>
+
+        <div class="project-list">
+            <div class="project-card">
+                <span class="project-no">Project 01</span>
+                <div class="project-name">Credit Risk Scoring</div>
+                <p class="project-desc">Evaluate loan applications to predict the probability of default using classification models.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 02</span>
+                <div class="project-name">Stock Price Prediction</div>
+                <p class="project-desc">Use Time-Series forecasting (LSTMs) to predict stock market trends based on historical data.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 03</span>
+                <div class="project-name">Credit Card Fraud Detection</div>
+                <p class="project-desc">Build real-time anomaly detection systems to identify and block fraudulent transactions.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 04</span>
+                <div class="project-name">Algorithmic Trading Bot</div>
+                <p class="project-desc">Develop a basic bot that executes trades based on technical indicators and ML signals.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 05</span>
+                <div class="project-name">Customer Lifetime Value (CLV)</div>
+                <p class="project-desc">Predict the total revenue a bank can expect from a customer over their entire relationship.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 06</span>
+                <div class="project-name">Anti-Money Laundering (AML)</div>
+                <p class="project-desc">Use Network Analysis to detect suspicious transaction patterns and money laundering activities.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 07</span>
+                <div class="project-name">Portfolio Optimization</div>
+                <p class="project-desc">Use Python to build a Mean-Variance optimizer for a balanced and profitable investment portfolio.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 08</span>
+                <div class="project-name">Insurance Premium Prediction</div>
+                <p class="project-desc">Regression project to calculate insurance premiums based on age, health, and risk factors.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 09</span>
+                <div class="project-name">Market Sentiment Analysis</div>
+                <p class="project-desc">Analyze financial news and tweets to predict market movements using NLP.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 10</span>
+                <div class="project-name">Loan Churn Prediction</div>
+                <p class="project-desc">Identify customers likely to refinance their loans with other banks for retention strategy.</p>
+            </div>
+        </div>
+
+        <div class="footer-btns">
+            <a href="placement-team.html" class="btn btn-black">Show me how Placement phase goes →</a>
+            <a href="Projects-gallery.html" class="btn btn-outline">other industry Projects</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Pricing | DataMites Anniversary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #D4AF37; --blue: #007bff; --dark: #121212; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            margin: 0; padding: 0; background: #fff; color: var(--dark);
+        }
+
+        .header { padding: 20px; text-align: center; background: #fff; }
+        .header img { height: 40px; }
+
+        .container { padding: 20px; max-width: 500px; margin: 0 auto; text-align: center; }
+
+        /* Anniversary Badge */
+        .anniversary-tag {
+            background: linear-gradient(45deg, #af924d, #D4AF37);
+            color: #fff; padding: 8px 20px; border-radius: 50px;
+            font-size: 12px; font-weight: 800; display: inline-block;
+            margin-bottom: 15px; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        h1 { font-size: 24px; font-weight: 800; margin-bottom: 30px; }
+
+        /* Price Section */
+        .price-card {
+            background: #fdfdfd; border: 2px solid #eee; border-radius: 24px;
+            padding: 40px 20px; position: relative; overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .regular-label { font-size: 14px; color: #888; text-transform: uppercase; font-weight: 600; }
+        
+        /* Strikethrough Price */
+        .old-price { 
+            font-size: 32px; color: #cc0000; text-decoration: line-through; 
+            font-weight: 800; display: block; margin: 10px 0;
+            opacity: 0.6;
+        }
+
+        .price-message { font-size: 16px; color: #444; margin: 20px 0; line-height: 1.5; }
+
+        /* Special Offer Button */
+        .btn-offer {
+            display: block; width: 100%; background: var(--dark);
+            color: #fff; padding: 22px; border-radius: 16px;
+            text-decoration: none; font-weight: 800; font-size: 16px;
+            border: none; cursor: pointer; transition: 0.3s;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        
+        .btn-offer:active { transform: scale(0.98); }
+
+        .btn-offer span {
+            display: block; font-size: 11px; font-weight: 400; opacity: 0.8;
+            margin-top: 4px; text-transform: uppercase;
+        }
+
+        /* Features List */
+        .benefits { text-align: left; margin-top: 30px; }
+        .benefit-item { 
+            display: flex; align-items: center; gap: 10px; margin-bottom: 12px;
+            font-size: 14px; color: #555;
+        }
+        .check { color: #28a745; font-weight: 900; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="datamites-logo.png" alt="DataMites">
+    </div>
+
+    <div class="container">
+        <div class="anniversary-tag">11 YEARS OF SUCCESSFUL JOURNEY</div>
+        <h1>Course Investment</h1>
+
+        <div class="price-card">
+            <span class="regular-label">Regular Web Price</span>
+            <span class="old-price">₹ 64,451</span>
+            
+            <p class="price-message">
+                This is our standard retail price for global certifications and placement assistance.
+            </p>
+
+            <div class="benefits">
+                <div class="benefit-item"><span class="check">✓</span> 2500+ Hiring Partners Support</div>
+                <div class="benefit-item"><span class="check">✓</span> Global IABAC Certification</div>
+                <div class="benefit-item"><span class="check">✓</span> Unlimited Interview Support</div>
+            </div>
+        </div>
+
+        <a href="offer-reveal.html" class="btn-offer">
+            UNLOCK 11th ANNIVERSARY OFFER
+            <span>Limited time celebration discount</span>
+        </a>
+
+        <p style="font-size: 12px; color: #aaa; margin-top: 20px;">
+            *Offer valid only for upto Feb 11th midnight.
+        </p>
+    </div>
+
+</body>
+</html>

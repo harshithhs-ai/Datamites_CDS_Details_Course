@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ecommerce Mission | DataMites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #2874f0; --orange: #ff9900; --dark: #1a1a1a; --gray: #666; }
+        
+        * { box-sizing: border-box; }
+
+        body { 
+            background: #fff; 
+            color: var(--dark); 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            margin: 0; 
+            overflow-x: hidden; 
+            scroll-behavior: smooth; 
+        }
+
+        /* FIXED OVERLAP: Added solid background and fixed height */
+        .top-header { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            text-align: center; 
+            z-index: 1000; 
+            padding: 15px 0; 
+            background: #fff; 
+            border-bottom: 1px solid #eee;
+        }
+        .header-tag { 
+            background: rgba(40, 116, 240, 0.1); 
+            color: var(--blue); 
+            padding: 6px 20px; 
+            border-radius: 30px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            border: 1px solid rgba(40, 116, 240, 0.2); 
+        }
+
+        .progress-nav { position: fixed; top: 0; width: 100%; height: 4px; background: #eee; z-index: 1001; }
+        .progress-fill { height: 100%; background: var(--blue); width: 0%; transition: 0.3s; }
+
+        /* GAP FIX: Changed min-height and added top padding for header space */
+        .slide { 
+            min-height: auto; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 80px 20px 40px; /* Top padding is 80px to clear header */
+            text-align: center; 
+            border-bottom: 1px solid #f9f9f9; 
+            max-width: 450px; /* Mobile standard width */
+            margin: 0 auto;
+        }
+
+        .module-label { font-weight: 800; color: var(--blue); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+        .hero-title { font-size: 28px; font-weight: 800; margin: 10px 0; line-height: 1.2; color: #000; }
+        .story-box { font-size: 15px; color: var(--gray); line-height: 1.6; margin-bottom: 20px; }
+        .highlight { color: var(--dark); font-weight: 600; border-bottom: 2px solid var(--orange); }
+
+        .tools-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 5px; }
+        .tool-card { background: #f0f7ff; border: 1px solid #d0e7ff; padding: 6px 14px; border-radius: 50px; font-size: 11px; font-weight: 600; color: var(--blue); }
+
+        /* ACTION AREA */
+        .action-group { display: flex; gap: 12px; margin-top: 30px; flex-direction: column; width: 100%; align-items: center; }
+        .primary-btn { background: var(--dark); color: #fff; padding: 16px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 15px; width: 100%; text-align: center; }
+        .secondary-btn { background: transparent; color: var(--dark); border: 2px solid var(--dark); padding: 14px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 15px; width: 100%; text-align: center; }
+        
+        .motivation-box { background: #fdf8e4; padding: 20px; border-radius: 15px; margin-top: 30px; border: 1px dashed #e6cc00; text-align: center; font-size: 14px; }
+
+        .back-link { 
+            text-decoration: none; color: #888; font-size: 13px; font-weight: 600; 
+            display: inline-block; margin-top: 20px; padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="progress-nav"><div class="progress-fill" id="pBar"></div></div>
+<div class="top-header"><div class="header-tag">Example 2 - Ecommerce Mission(Flipkart)</div></div>
+
+<section class="slide">
+    <span class="module-label">Module 01 & 02: Foundation</span>
+    <h1 class="hero-title">Planning the Big Billion Day.</h1>
+    <div class="story-box">
+        Flipkart needs a plan for their biggest sale. How many users will visit? Which city will buy the most? They use <span class="highlight">Python</span> to pull millions of customer records and clean the data.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Python</span> <span class="tool-card">Data Science Foundation</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="module-label">Module 03: Statistics</span>
+    <h1 class="hero-title">Managing the Inventory.</h1>
+    <div class="story-box">
+        Should Flipkart store 1 Lakh phones or 5 Lakh? They use <span class="highlight">Statistics</span> to calculate sales probability so they never run out of stock.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Statistics Essentials</span> <span class="tool-card">Pandas</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="module-label">Module 04 & 05: Machine Learning</span>
+    <h1 class="hero-title">Personalized Shopping.</h1>
+    <div class="story-box">
+        When a user buys a laptop, your <span class="highlight">Machine Learning</span> model suggests a mouse. It learns from millions of shoppers.So here you learn how to teach Machines to Predict.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">ML Associate</span> <span class="tool-card">ML Expert</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="module-label">Module 06, 08 & 09: Scaling Up</span>
+    <h1 class="hero-title">Handling Massive Clicks.</h1>
+    <div class="story-box">
+        To keep the site fast during peak hours,they use <span class="highlight">Big Data</span> tools and the <span class="highlight">Cloud</span>.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Big Data Foundation</span> <span class="tool-card">AWS Cloud</span> <span class="tool-card">Git</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="module-label">Module 07 & 10: Database & BI</span>
+    <h1 class="hero-title">The CEO's War Room.</h1>
+    <div class="story-box">
+        You use <span class="highlight">SQL</span> and <span class="highlight">Power BI</span> to show live profits to the CEO.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">SQL Database</span> <span class="tool-card">Power BI / Tableau</span>
+    </div>
+
+    <div class="motivation-box">
+        <b>DataMites takes you from basics to CEO Reports!</b><br>
+        Dont worry if you know Coding or not we teach from Scratch
+    </div>
+
+    <div class="action-group">
+        <a href="internship-entry.html" class="primary-btn">Next: Internship Phase →</a>
+        <a href="example3.html" class="secondary-btn">Explore Example 3</a>
+        <a href="parts.html" class="back-link">← Back to Phase</a>
+    </div>
+</section>
+
+<script>
+    window.onscroll = function() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("pBar").style.width = scrolled + "%";
+    };
+</script>
+
+</body>
+</html>

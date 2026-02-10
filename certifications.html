@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Certifications | DataMites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #007bff; --dark: #121212; --gold: #af924d; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            margin: 0; padding: 0; background: #fcfcfc; color: var(--dark);
+        }
+
+        .header { padding: 25px; text-align: center; background: #fff; border-bottom: 1px solid #eee; }
+        .header img { height: 40px; }
+
+        .container { padding: 30px 20px 100px; max-width: 500px; margin: 0 auto; }
+        
+        .top-meta { text-align: center; margin-bottom: 30px; }
+        .top-meta h1 { font-size: 26px; font-weight: 800; margin: 0; color: var(--dark); }
+        .top-meta p { font-size: 14px; color: #666; margin-top: 8px; }
+
+        /* Certificate Grid */
+        .cert-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+
+        .cert-card {
+            background: #fff; border: 1px solid #eee; border-radius: 20px;
+            padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+        }
+        .cert-card:active { transform: scale(0.98); }
+
+        .cert-img-wrapper {
+            width: 100%; height: 200px; background: #f9f9f9;
+            border-radius: 12px; overflow: hidden; margin-bottom: 15px;
+            display: flex; align-items: center; justify-content: center;
+            border: 1px solid #f0f0f0;
+        }
+        .cert-img-wrapper img { max-width: 90%; max-height: 90%; object-fit: contain; }
+
+        .cert-info h3 { font-size: 18px; font-weight: 800; margin: 0; color: var(--blue); }
+        .cert-info p { font-size: 13px; color: #777; margin: 5px 0 0; line-height: 1.4; }
+
+        /* Footer Action */
+        .sticky-footer {
+            position: fixed; bottom: 0; width: 100%; max-width: 500px;
+            background: rgba(255,255,255,0.9); backdrop-filter: blur(10px);
+            padding: 20px; border-top: 1px solid #eee; left: 50%; transform: translateX(-50%);
+        }
+
+        .btn-submit {
+            display: block; width: 100%; background: var(--dark);
+            color: #fff; padding: 20px; border-radius: 16px;
+            text-decoration: none; font-weight: 800; text-align: center;
+            font-size: 18px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="datamites-logo.png" alt="DataMites">
+    </div>
+
+    <div class="container">
+        <div class="top-meta">
+            <h1>Global Recognition</h1>
+            <p>Your skills are backed by international bodies.</p>
+        </div>
+
+        <div class="cert-grid">
+            <div class="cert-card">
+                <div class="cert-img-wrapper">
+                    <img src="iabac.png" alt="IABAC Certificate">
+                </div>
+                <div class="cert-info">
+                    <h3>IABAC® Certification</h3>
+                    <p>International Association for Business Analytics Certification, recognized globally across 60+ countries.</p>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-img-wrapper">
+                    <img src="nasscom.png" alt="NASSCOM Certificate">
+                </div>
+                <div class="cert-info">
+                    <h3>NASSCOM FutureSkills</h3>
+                    <p>Government-recognized certification aligned with SSC NASSCOM and MeitY standards.</p>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-card">
+                <div class="cert-img-wrapper">
+                    <img src="datamites-cert.png" alt="DataMites Certificate">
+                </div>
+                <div class="cert-info">
+                    <h3>DataMites Professional</h3>
+                    <p>Comprehensive industry-readiness certificate upon successful project completion.</p>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-img-wrapper">
+                    <img src="rubixe.png" alt="Rubixe Internship">
+                </div>
+                <div class="cert-info">
+                    <h3>Rubixe Internship</h3>
+                    <p>Real-world experience certificate from Rubixe, an AI-specialized research firm.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sticky-footer">
+        <a href="course-price.html" class="btn-submit">Pls tell me Course fees</a>
+    </div>
+
+</body>
+</html>

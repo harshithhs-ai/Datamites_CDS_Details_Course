@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Projects | DataMites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --health-green: #10b981; --dark: #1a1a1a; --soft-bg: #f8fafc; }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            background: var(--soft-bg); color: var(--dark); 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            line-height: 1.6;
+        }
+
+        /* Image badalu Premium Gradient Header */
+        .header-banner {
+            background: linear-gradient(135deg, #064e3b 0%, #10b981 100%);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        .header-banner h1 { 
+            font-size: 30px; 
+            font-weight: 800; 
+            margin-bottom: 5px;
+        }
+
+        .header-banner p { 
+            opacity: 0.9; 
+            font-size: 14px; 
+            font-weight: 500;
+        }
+
+        .content-area { padding: 20px; max-width: 600px; margin: 0 auto; }
+
+        .back-nav { margin-top: -30px; margin-bottom: 20px; text-align: center; }
+        .back-link { 
+            text-decoration: none; 
+            color: var(--dark); 
+            background: #fff;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700; 
+            font-size: 13px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Project Card Styling */
+        .project-list { margin-top: 20px; }
+
+        .project-card {
+            background: #fff;
+            padding: 22px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            border: 1px solid #edf2f7;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            transition: 0.3s;
+        }
+
+        .project-card:active { transform: scale(0.98); }
+
+        .project-no {
+            font-size: 11px;
+            font-weight: 800;
+            color: var(--health-green);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-name { font-size: 18px; font-weight: 800; color: #000; margin: 4px 0; }
+        .project-desc { font-size: 14px; color: #64748b; }
+
+        /* Footer Action */
+        .footer-btns {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding-bottom: 40px;
+        }
+
+        .btn {
+            padding: 18px; border-radius: 16px; text-decoration: none;
+            text-align: center; font-weight: 700; font-size: 15px;
+        }
+        .btn-black { background: var(--dark); color: #fff; }
+        .btn-outline { border: 2px solid #e2e8f0; color: var(--dark); background: #fff; }
+
+    </style>
+</head>
+<body>
+
+    <div class="header-banner">
+        <h1>Healthcare Missions</h1>
+        <p>10+ Real-world Data Science Projects</p>
+    </div>
+
+    <div class="content-area">
+        <div class="back-nav">
+            <a href="Projects-gallery.html" class="back-link">← Back to Universe</a>
+        </div>
+
+        <div class="project-list">
+            <div class="project-card">
+                <span class="project-no">Project 01</span>
+                <div class="project-name">Heart Disease Prediction</div>
+                <p class="project-desc">Analyze patient vitals to predict cardiovascular risks using ML models.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 02</span>
+                <div class="project-name">AI X-Ray Scanner</div>
+                <p class="project-desc">Computer Vision model to detect pneumonia or lung issues instantly from images.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 03</span>
+                <div class="project-name">Diabetes Risk Assessment</div>
+                <p class="project-desc">Use Statistics to find the probability of diabetes based on lifestyle and health data.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 04</span>
+                <div class="project-name">Hospital Resource Optimization</div>
+                <p class="project-desc">SQL-based tool to track bed occupancy and oxygen supply live for management.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 05</span>
+                <div class="project-name">Patient Churn Analysis</div>
+                <p class="project-desc">Predict why patients switch hospitals using classification models.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 06</span>
+                <div class="project-name">Drug Discovery Analytics</div>
+                <p class="project-desc">Use Data Science to speed up the process of finding and testing new medicines.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 07</span>
+                <div class="project-name">Telemedicine Dashboard</div>
+                <p class="project-desc">Power BI dashboard to track and analyze online doctor-patient consultations.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 08</span>
+                <div class="project-name">Blood Donor Matching</div>
+                <p class="project-desc">AI system to match urgent blood requirements with the nearest available donors.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 09</span>
+                <div class="project-name">Health Insurance Fraud</div>
+                <p class="project-desc">Detect fake medical insurance claims using anomaly detection algorithms.</p>
+            </div>
+
+            <div class="project-card">
+                <span class="project-no">Project 10</span>
+                <div class="project-name">Mental Health Tracker</div>
+                <p class="project-desc">Analyze user sentiment and behavioral patterns to provide early support.</p>
+            </div>
+        </div>
+
+        <div class="footer-btns">
+            <a href="placement-team.html" class="btn btn-black">See how internship phase go →</a>
+            <a href="Projects-gallery.html" class="btn btn-outline">other industry Projects</a>
+        </div>
+    </div>
+
+</body>
+</html>
